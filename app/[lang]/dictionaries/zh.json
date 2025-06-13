@@ -1,0 +1,122 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "portfolio": "作品集",
+    "blog": "博客",
+    "contact": "联系我们"
+  },
+  "home": {
+    "hero": {
+      "title": "欢迎来到我们的精彩平台",
+      "subtitle": "我们创造美丽的多语言体验，连接不同文化和语言的人们。",
+      "cta": "立即开始"
+    },
+    "features": {
+      "title": "为什么选择我们",
+      "items": [
+        {
+          "title": "多语言支持",
+          "description": "全面支持多种语言，无缝切换"
+        },
+        {
+          "title": "现代设计",
+          "description": "美观的响应式设计，适用于所有设备"
+        },
+        {
+          "title": "高性能",
+          "description": "通过服务器端渲染优化速度"
+        },
+        {
+          "title": "SEO友好",
+          "description": "采用SEO最佳实践构建，提高可见性"
+        }
+      ]
+    },
+    "stats": {
+      "projects": "完成项目",
+      "clients": "满意客户",
+      "years": "年经验",
+      "awards": "获得奖项"
+    }
+  },
+  "about": {
+    "title": "关于我们公司",
+    "subtitle": "跨越语言和文化的桥梁",
+    "description": "我们是一个充满激情的团队，致力于创造卓越的多语言数字体验。我们的使命是打破语言障碍，通过创新的技术解决方案连接来自不同文化的人们。",
+    "team": {
+      "title": "认识我们的团队",
+      "members": [
+        {
+          "name": "莎拉·约翰逊",
+          "role": "首席执行官兼创始人",
+          "bio": "具有15年以上国际商务经验的远见卓识的领导者"
+        },
+        {
+          "name": "大卫·陈",
+          "role": "首席技术官",
+          "bio": "专门从事多语言平台的技术专家"
+        },
+        {
+          "name": "玛丽亚·加西亚",
+          "role": "设计总监",
+          "bio": "在跨文化设计方面具有专业知识的创意总监"
+        }
+      ]
+    }
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "满足您多语言需求的综合解决方案",
+    "items": [
+      {
+        "title": "网站本地化",
+        "description": "完整的网站翻译和文化适应",
+        "features": ["内容翻译", "文化适应", "SEO优化", "技术实施"]
+      },
+      {
+        "title": "移动应用开发",
+        "description": "原生和跨平台多语言移动应用程序",
+        "features": ["iOS和Android", "跨平台解决方案", "多语言UI/UX", "应用商店优化"]
+      },
+      {
+        "title": "电子商务解决方案",
+        "description": "支持全球支付的多语言在线商店",
+        "features": ["多货币支持", "全球配送", "本地化结账", "库存管理"]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "我们的作品集",
+    "subtitle": "展示我们最好的多语言项目",
+    "categories": ["全部", "网站", "移动应用", "电子商务", "企业"]
+  },
+  "blog": {
+    "title": "最新新闻和见解",
+    "subtitle": "了解多语言技术的最新趋势",
+    "readMore": "阅读更多"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "准备开始您的多语言之旅了吗？今天就联系我们！",
+    "form": {
+      "name": "全名",
+      "email": "电子邮件地址",
+      "subject": "主题",
+      "message": "您的消息",
+      "submit": "发送消息"
+    },
+    "info": {
+      "address": "全球街123号，国际城，IC 12345",
+      "phone": "+86 123-4567-8901",
+      "email": "hello@multilingual.com"
+    }
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "getStarted": "开始",
+    "viewAll": "查看全部",
+    "backToHome": "返回首页"
+  }
+}

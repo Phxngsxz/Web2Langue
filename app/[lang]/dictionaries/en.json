@@ -1,0 +1,122 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Our Amazing Platform",
+      "subtitle": "We create beautiful, multilingual experiences that connect people across cultures and languages.",
+      "cta": "Get Started Today"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "items": [
+        {
+          "title": "Multilingual Support",
+          "description": "Full support for multiple languages with seamless switching"
+        },
+        {
+          "title": "Modern Design",
+          "description": "Beautiful, responsive design that works on all devices"
+        },
+        {
+          "title": "Fast Performance",
+          "description": "Optimized for speed with server-side rendering"
+        },
+        {
+          "title": "SEO Friendly",
+          "description": "Built with SEO best practices for better visibility"
+        }
+      ]
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "years": "Years Experience",
+      "awards": "Awards Won"
+    }
+  },
+  "about": {
+    "title": "About Our Company",
+    "subtitle": "Building bridges across languages and cultures",
+    "description": "We are a passionate team dedicated to creating exceptional multilingual digital experiences. Our mission is to break down language barriers and connect people from different cultures through innovative technology solutions.",
+    "team": {
+      "title": "Meet Our Team",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CEO & Founder",
+          "bio": "Visionary leader with 15+ years in international business"
+        },
+        {
+          "name": "David Chen",
+          "role": "CTO",
+          "bio": "Technology expert specializing in multilingual platforms"
+        },
+        {
+          "name": "Maria Garcia",
+          "role": "Head of Design",
+          "bio": "Creative director with expertise in cross-cultural design"
+        }
+      ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your multilingual needs",
+    "items": [
+      {
+        "title": "Website Localization",
+        "description": "Complete website translation and cultural adaptation",
+        "features": ["Content Translation", "Cultural Adaptation", "SEO Optimization", "Technical Implementation"]
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "Native and cross-platform multilingual mobile applications",
+        "features": ["iOS & Android", "Cross-platform Solutions", "Multilingual UI/UX", "App Store Optimization"]
+      },
+      {
+        "title": "E-commerce Solutions",
+        "description": "Multilingual online stores with global payment support",
+        "features": ["Multi-currency Support", "Global Shipping", "Localized Checkout", "Inventory Management"]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Showcasing our best multilingual projects",
+    "categories": ["All", "Websites", "Mobile Apps", "E-commerce", "Enterprise"]
+  },
+  "blog": {
+    "title": "Latest News & Insights",
+    "subtitle": "Stay updated with the latest trends in multilingual technology",
+    "readMore": "Read More"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to start your multilingual journey? Contact us today!",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "address": "123 Global Street, International City, IC 12345",
+      "phone": "+1 (555) 123-4567",
+      "email": "hello@multilingual.com"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "backToHome": "Back to Home"
+  }
+}
