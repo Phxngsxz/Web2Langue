@@ -1,31 +1,56 @@
-import { getDictionary } from "./dictionaries"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Users, Award, Clock, Star, Zap, Shield, Globe2 } from "lucide-react"
-import { AnimatedCounter } from "@/components/animated-counter"
-import { TypewriterText } from "@/components/typewriter-text"
+import { getDictionary } from "./dictionaries";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  ArrowRight,
+  Users,
+  Award,
+  Clock,
+  Star,
+  Zap,
+  Shield,
+  Globe2,
+} from "lucide-react";
+import { AnimatedCounter } from "@/components/animated-counter";
+import { TypewriterText } from "@/components/typewriter-text";
 
 export default async function Home({
   params: { lang },
 }: {
-  params: { lang: string }
+  params: { lang: string };
 }) {
-  const dict = await getDictionary(lang as "en" | "th" | "zh" | "ja")
+  const dict = await getDictionary(lang as "en" | "th" | "zh" | "ja");
 
   const stats = [
     { icon: Users, value: 500, label: dict.home.stats.projects },
     { icon: Star, value: 200, label: dict.home.stats.clients },
     { icon: Clock, value: 10, label: dict.home.stats.years },
     { icon: Award, value: 50, label: dict.home.stats.awards },
-  ]
+  ];
 
   const features = [
-    { icon: Zap, title: dict.home.features.items[0].title, description: dict.home.features.items[0].description },
-    { icon: Shield, title: dict.home.features.items[1].title, description: dict.home.features.items[1].description },
-    { icon: Globe2, title: dict.home.features.items[2].title, description: dict.home.features.items[2].description },
-    { icon: Star, title: dict.home.features.items[3].title, description: dict.home.features.items[3].description },
-  ]
+    {
+      icon: Zap,
+      title: dict.home.features.items[0].title,
+      description: dict.home.features.items[0].description,
+    },
+    {
+      icon: Shield,
+      title: dict.home.features.items[1].title,
+      description: dict.home.features.items[1].description,
+    },
+    {
+      icon: Globe2,
+      title: dict.home.features.items[2].title,
+      description: dict.home.features.items[2].description,
+    },
+    {
+      icon: Star,
+      title: dict.home.features.items[3].title,
+      description: dict.home.features.items[3].description,
+    },
+  ];
 
   return (
     <div className="min-h-screen relative">
@@ -54,7 +79,10 @@ export default async function Home({
               <TypewriterText text={dict.home.hero.title} />
             </h1>
           </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
             <p className="mx-auto mb-8 max-w-3xl text-lg text-gray-600 sm:text-xl md:text-2xl">
               {dict.home.hero.subtitle}
             </p>
@@ -65,7 +93,10 @@ export default async function Home({
               size="lg"
               className="bg-black text-white hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              <Link href={`/${lang}/contact`} className="flex items-center gap-2">
+              <Link
+                href={`/${lang}/contact`}
+                className="flex items-center gap-2"
+              >
                 {dict.home.hero.cta}
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -95,7 +126,9 @@ export default async function Home({
                 <div className="mb-2 text-3xl font-bold sm:text-4xl">
                   <AnimatedCounter end={stat.value} suffix="+" />
                 </div>
-                <div className="text-sm text-gray-300 sm:text-base">{stat.label}</div>
+                <div className="text-sm text-gray-300 sm:text-base">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -143,7 +176,10 @@ export default async function Home({
           <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl animate-fade-in-up">
             {dict.common.getStarted}
           </h2>
-          <p className="mb-8 text-lg opacity-90 sm:text-xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p
+            className="mb-8 text-lg opacity-90 sm:text-xl animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             {dict.home.hero.subtitle}
           </p>
           <div
@@ -169,5 +205,5 @@ export default async function Home({
         </div>
       </section>
     </div>
-  )
+  );
 }

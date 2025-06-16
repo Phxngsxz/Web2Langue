@@ -1,9 +1,9 @@
-import Link from "next/link"
-import type { Dictionary } from "@/app/[lang]/dictionaries"
+import Link from "next/link";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 interface FooterProps {
-  lang: string
-  dict: Dictionary
+  lang: string;
+  dict: Dictionary;
 }
 
 export function Footer({ lang, dict }: FooterProps) {
@@ -26,10 +26,16 @@ export function Footer({ lang, dict }: FooterProps) {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">{dict.navigation.home}</h3>
             <div className="space-y-2">
-              <Link href={`/${lang}`} className="block text-gray-400 hover:text-white transition-colors text-sm">
+              <Link
+                href={`/${lang}`}
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
                 {dict.navigation.home}
               </Link>
-              <Link href={`/${lang}/about`} className="block text-gray-400 hover:text-white transition-colors text-sm">
+              <Link
+                href={`/${lang}/about`}
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
                 {dict.navigation.about}
               </Link>
               <Link
@@ -43,7 +49,9 @@ export function Footer({ lang, dict }: FooterProps) {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">{dict.navigation.services}</h3>
+            <h3 className="font-semibold text-lg">
+              {dict.navigation.services}
+            </h3>
             <div className="space-y-2">
               <Link
                 href={`/${lang}/portfolio`}
@@ -51,7 +59,10 @@ export function Footer({ lang, dict }: FooterProps) {
               >
                 {dict.navigation.portfolio}
               </Link>
-              <Link href={`/${lang}/blog`} className="block text-gray-400 hover:text-white transition-colors text-sm">
+              <Link
+                href={`/${lang}/blog`}
+                className="block text-gray-400 hover:text-white transition-colors text-sm"
+              >
                 {dict.navigation.blog}
               </Link>
               <Link
@@ -75,9 +86,11 @@ export function Footer({ lang, dict }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} MultiLang. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} MultiLang. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

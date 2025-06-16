@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export function FloatingElements() {
   return (
@@ -32,5 +32,5 @@ export function FloatingElements() {
         style={{ animationDelay: "2s" }}
       />
     </div>
-  )
+  );
 }

@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavigationProps {
-  lang: string
+  lang: string;
   dict: {
     navigation: {
-      home: string
-      about: string
-      contact: string
-    }
-  }
+      home: string;
+      about: string;
+      contact: string;
+    };
+  };
 }
 
 export function Navigation({ lang, dict }: NavigationProps) {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isActive = (path: string) => {
-    return pathname === `/${lang}${path === "/" ? "" : path}`
-  }
+    return pathname === `/${lang}${path === "/" ? "" : path}`;
+  };
 
   return (
     <nav className="hidden md:flex items-center space-x-6">
@@ -48,5 +48,5 @@ export function Navigation({ lang, dict }: NavigationProps) {
         {dict.navigation.contact}
       </Link>
     </nav>
-  )
+  );
 }

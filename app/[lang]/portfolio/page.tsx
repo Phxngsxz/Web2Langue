@@ -1,30 +1,64 @@
-import { getDictionary } from "../dictionaries"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { getDictionary } from "../dictionaries";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default async function Portfolio({
   params: { lang },
 }: {
-  params: { lang: string }
+  params: { lang: string };
 }) {
-  const dict = await getDictionary(lang as "en" | "th" | "zh" | "ja")
+  const dict = await getDictionary(lang as "en" | "th" | "zh" | "ja");
 
   const projects = [
-    { title: "Global E-commerce Platform", category: "E-commerce", image: "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400" },
-    { title: "Multilingual News Website", category: "Website", image: "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400" },
-    { title: "International Banking App", category: "Mobile App", image: "https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1height=300&width=400" },
-    { title: "Enterprise CRM System", category: "Enterprise", image: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400" },
-    { title: "Travel Booking Platform", category: "Website", image: "https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400" },
-    { title: "Food Delivery App", category: "Mobile App", image: "https://images.pexels.com/photos/388415/pexels-photo-388415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400" },
-  ]
+    {
+      title: "Global E-commerce Platform",
+      category: "E-commerce",
+      image:
+        "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400",
+    },
+    {
+      title: "Multilingual News Website",
+      category: "Website",
+      image:
+        "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400",
+    },
+    {
+      title: "International Banking App",
+      category: "Mobile App",
+      image:
+        "https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1height=300&width=400",
+    },
+    {
+      title: "Enterprise CRM System",
+      category: "Enterprise",
+      image:
+        "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400",
+    },
+    {
+      title: "Travel Booking Platform",
+      category: "Website",
+      image:
+        "https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400",
+    },
+    {
+      title: "Food Delivery App",
+      category: "Mobile App",
+      image:
+        "https://images.pexels.com/photos/388415/pexels-photo-388415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?height=300&width=400",
+    },
+  ];
 
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{dict.portfolio.title}</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{dict.portfolio.subtitle}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            {dict.portfolio.title}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {dict.portfolio.subtitle}
+          </p>
         </div>
 
         {/* Category Filter */}
@@ -56,12 +90,14 @@ export default async function Portfolio({
               </div>
               <CardContent className="p-6">
                 <Badge className="mb-3">{project.category}</Badge>
-                <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {project.title}
+                </h3>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

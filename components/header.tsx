@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { LanguageSwitcher } from "./language-switcher"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
-import { useState, useEffect } from "react"
-import type { Dictionary } from "@/app/[lang]/dictionaries"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { LanguageSwitcher } from "./language-switcher";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { useState, useEffect } from "react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 interface HeaderProps {
-  lang: string
-  dict: Dictionary
+  lang: string;
+  dict: Dictionary;
 }
 
 export function Header({ lang, dict }: HeaderProps) {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (path: string) => {
-    return pathname === `/${lang}${path === "/" ? "" : path}`
-  }
+    return pathname === `/${lang}${path === "/" ? "" : path}`;
+  };
 
   const navItems = [
     { href: "/", label: dict.navigation.home },
@@ -38,12 +38,14 @@ export function Header({ lang, dict }: HeaderProps) {
     { href: "/portfolio", label: dict.navigation.portfolio },
     { href: "/blog", label: dict.navigation.blog },
     { href: "/contact", label: dict.navigation.contact },
-  ]
+  ];
 
   return (
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200" : "bg-transparent"
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -82,12 +84,19 @@ export function Header({ lang, dict }: HeaderProps) {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden hover:bg-gray-100">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="md:hidden hover:bg-gray-100"
+                >
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">
+              <SheetContent
+                side="right"
+                className="w-[300px] sm:w-[400px] bg-white"
+              >
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item, index) => (
                     <Link
@@ -109,5 +118,5 @@ export function Header({ lang, dict }: HeaderProps) {
         </div>
       </div>
     </header>
-  )
+  );
 }

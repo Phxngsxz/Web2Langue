@@ -1,14 +1,8 @@
-import Link from "next/link"
-import { getDictionary } from "./dictionaries"
+import Link from "next/link";
+import { getDictionary } from "./dictionaries";
 
-export default async function Navigation({
-  lang,
-}: {
-  lang: string
-}) {
-  // ดึงข้อมูลภาษาตาม locale
-  const dict = await getDictionary(lang as "en" | "th")
-
+export default async function Navigation({ lang }: { lang: string }) {
+  const dict = await getDictionary(lang as "en" | "th");
   return (
     <nav className="flex gap-4">
       <Link href={`/${lang}`} className="hover:underline">
@@ -21,5 +15,5 @@ export default async function Navigation({
         {dict.navigation.contact}
       </Link>
     </nav>
-  )
+  );
 }
